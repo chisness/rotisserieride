@@ -45,11 +45,12 @@
         .gallery {
             position: relative;
             width: 100%;
-            height: 300px;
+            height: 400px;
             overflow: hidden;
             margin-top: 2rem;
+            background-color: #000;
         }
-        .gallery-image {
+        .gallery-item {
             position: absolute;
             top: 0;
             left: 0;
@@ -57,26 +58,59 @@
             height: 100%;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .gallery-image.active {
+        .gallery-item.active {
             opacity: 1;
+        }
+        .gallery-image {
+            max-width: 100%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        .gallery-caption {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Rotisserie Ride</h1>
-        <p>LA to NYC via Chicago</p>
+        <p>LA to NYC via Chicago in 2 months</p>
+        <p>Aug-Oct (Year TBD)</p>
     </header>
     <main>
         <img src="rrmap.png" alt="Map of Rotisserie Ride route">
         
         <section class="gallery">
-            <img src="sudan.jpg" alt="Sudan" class="gallery-image active">
-            <img src="israel.jpg" alt="Israel" class="gallery-image">
-            <img src="wholefoodsempty.jpg" alt="Empty Whole Foods" class="gallery-image">
-            <img src="wholefoods.jpg" alt="Whole Foods" class="gallery-image">
-            <img src="jewel.jpg" alt="Kosher Jewel" class="gallery-image">
+            <div class="gallery-item active">
+                <img src="sudan.jpg" alt="Sudan" class="gallery-image">
+                <div class="gallery-caption">Sudan: Where our journey begins</div>
+            </div>
+            <div class="gallery-item">
+                <img src="israel.jpg" alt="Israel" class="gallery-image">
+                <div class="gallery-caption">Israel: A pivotal stop on our Rotisserie Ride</div>
+            </div>
+            <div class="gallery-item">
+                <img src="wholefoodsempty.jpg" alt="Empty Whole Foods" class="gallery-image">
+                <div class="gallery-caption">Empty Whole Foods: The calm before the storm</div>
+            </div>
+            <div class="gallery-item">
+                <img src="wholefoods.jpg" alt="Whole Foods" class="gallery-image">
+                <div class="gallery-caption">Whole Foods: Stocking up for our journey</div>
+            </div>
+            <div class="gallery-item">
+                <img src="jewel.jpg" alt="Kosher Jewel" class="gallery-image">
+                <div class="gallery-caption">Kosher Jewel: Exploring diverse culinary traditions</div>
+            </div>
         </section>
         
         <section class="sponsorship">
@@ -87,16 +121,16 @@
     </main>
 
     <script>
-        const galleryImages = document.querySelectorAll('.gallery-image');
-        let currentImageIndex = 0;
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        let currentItemIndex = 0;
 
         function rotateGallery() {
-            galleryImages[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-            galleryImages[currentImageIndex].classList.add('active');
+            galleryItems[currentItemIndex].classList.remove('active');
+            currentItemIndex = (currentItemIndex + 1) % galleryItems.length;
+            galleryItems[currentItemIndex].classList.add('active');
         }
 
-        setInterval(rotateGallery, 3000); // Change image every 3 seconds
+        setInterval(rotateGallery, 5000); // Change image every 5 seconds
     </script>
 </body>
 </html>
