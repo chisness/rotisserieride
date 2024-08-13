@@ -27,7 +27,12 @@
             max-width: 100%;
             height: auto;
         }
-        .sponsorship {
+        .route-map {
+            max-width: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+        .sponsorship, .mailing-list {
             background-color: #fff;
             border-radius: 5px;
             padding: 1rem;
@@ -45,7 +50,7 @@
         .gallery {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 500px;
             overflow: hidden;
             margin-top: 2rem;
             background-color: #000;
@@ -68,7 +73,7 @@
         }
         .gallery-image {
             max-width: 100%;
-            max-height: 80%;
+            max-height: 85%;
             object-fit: contain;
         }
         .gallery-caption {
@@ -79,6 +84,18 @@
             text-align: center;
             width: 100%;
         }
+        .sponsorship-tiers {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .tier {
+            flex-basis: 48%;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -88,35 +105,66 @@
         <p>Aug-Oct (Year TBD)</p>
     </header>
     <main>
-        <img src="rrmap.png" alt="Map of Rotisserie Ride route">
+        <img src="rrmap.png" alt="Map of Rotisserie Ride route" class="route-map">
         
         <section class="gallery">
             <div class="gallery-item active">
                 <img src="sudan.jpg" alt="Sudan" class="gallery-image">
-                <div class="gallery-caption">Sudan: Where our journey begins</div>
+                <div class="gallery-caption">Chicken in Sudan</div>
             </div>
             <div class="gallery-item">
                 <img src="israel.jpg" alt="Israel" class="gallery-image">
-                <div class="gallery-caption">Israel: A pivotal stop on our Rotisserie Ride</div>
+                <div class="gallery-caption">Chicken in Israel</div>
             </div>
             <div class="gallery-item">
                 <img src="wholefoodsempty.jpg" alt="Empty Whole Foods" class="gallery-image">
-                <div class="gallery-caption">Empty Whole Foods: The calm before the storm</div>
+                <div class="gallery-caption">No chicken at Whole Foods</div>
             </div>
             <div class="gallery-item">
                 <img src="wholefoods.jpg" alt="Whole Foods" class="gallery-image">
-                <div class="gallery-caption">Whole Foods: Stocking up for our journey</div>
+                <div class="gallery-caption">Whole Foods chicken</div>
             </div>
             <div class="gallery-item">
                 <img src="jewel.jpg" alt="Kosher Jewel" class="gallery-image">
-                <div class="gallery-caption">Kosher Jewel: Exploring diverse culinary traditions</div>
+                <div class="gallery-caption">Kosher Jewel chicken</div>
             </div>
         </section>
         
         <section class="sponsorship">
-            <h2>Sponsor a Chicken</h2>
-            <p>Make a difference by sponsoring a chicken! Half of your donation goes to supporting our feathered friends, while the other half supports an effective charity.</p>
-            <a href="#" class="cta-button">Sponsor Now</a>
+            <h2>Sponsorship Opportunities</h2>
+            <p>All sponsors will get a mention on this site.</p>
+            <div class="sponsorship-tiers">
+                <div class="tier">
+                    <h3>Costco - $5</h3>
+                    <p>Sponsor a Costco chicken (if we can find one on the route)</p>
+                </div>
+                <div class="tier">
+                    <h3>Whole Foods - $10</h3>
+                    <p>Sponsor a slightly less radioactive chicken</p>
+                </div>
+                <div class="tier">
+                    <h3>Erewhon - $25</h3>
+                    <p>Sponsor an ultra premium chicken (or a base chicken with some sides)</p>
+                </div>
+                <div class="tier">
+                    <h3>Chicken with a side of t-shirt - $50</h3>
+                    <p>Sponsor a chicken and get an official Rotisserie Ride t-shirt</p>
+                </div>
+                <div class="tier">
+                    <h3>NYC Chickenfest - $100</h3>
+                    <p>Join for the Chickenfest finale and also sponsor a chicken/get an official t-shirt</p>
+                </div>
+            </div>
+            <a href="#" class="cta-button">Become a Sponsor</a>
+        </section>
+
+        <section class="mailing-list">
+            <h2>Stay Updated</h2>
+            <p>Join the mailing list for updates.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="cta-button">Subscribe</button>
+            </form>
         </section>
     </main>
 
