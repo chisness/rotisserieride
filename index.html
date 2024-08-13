@@ -57,7 +57,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 500px; /* Increased height for larger images */
+            height: 500px;
         }
         .gallery-item {
             display: none;
@@ -72,7 +72,7 @@
         }
         .gallery-image {
             max-width: 100%;
-            max-height: 450px; /* Increased max-height */
+            max-height: 450px;
             object-fit: contain;
             width: auto;
             height: auto;
@@ -120,6 +120,13 @@
             height: 100%;
             border: none;
         }
+        .tweet-image {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -131,6 +138,10 @@
     <main>
         <img src="rrmap.png" alt="Map of Rotisserie Ride route" class="route-map">
         
+        <a href="https://x.com/lexfridman/status/1705644413144154240" target="_blank" rel="noopener noreferrer">
+            <img src="lex.jpg" alt="Lex Fridman Tweet" class="tweet-image">
+        </a>
+
         <section class="sponsorship">
             <div class="google-form-container">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDSTbRK2suayMHUYZ4f2FFagrfMvj9PS9w7KItZacI6DhyUg/viewform?embedded=true">Loading…</iframe>
