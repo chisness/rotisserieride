@@ -12,11 +12,21 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        header {
+        header, footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1rem;
+        }
+        header a, footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header a:hover, footer a:hover {
+            color: #45a049;
+            text-decoration: underline;
         }
         main {
             padding: 2rem;
@@ -124,10 +134,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
             margin-top: 2rem;
         }
     </style>
@@ -183,8 +189,9 @@
             <img src="lex.jpg" alt="Lex Fridman Tweet" class="tweet-image">
         </a>
     </main>
+
     <footer>
-        <p>Organized by <a href="https://maxchiswick.com">Max Chiswick</a></p>
+        <p>Made by <a href="https://maxchiswick.com" target="_blank" rel="noopener noreferrer">Max Chiswick</a></p>
     </footer>
 
     <script>
